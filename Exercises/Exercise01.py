@@ -29,6 +29,6 @@ distance_to_water_point = get_opposite_leg(first_radian, distance_to_water)
 sand_path = get_hypotenuse(distance_to_water, distance_to_water_point)
 water_path = get_hypotenuse((distance_to_drowning - distance_to_water_point), distance_to_coast)
 result_time = get_time_to_drowning(speed_on_sand, sand_path, water_path, water_coef) * 3600
-print("Если спасатель начнет движение под углом theta1, равным {:d} градусам, он достигнет утопающего \
-через {:.1f} секунды".format(int(first_degree), result_time))
+print("Если спасатель начнет движение под углом theta1, равным {:d} градусам, он достигнет утопающего "
+      "через {:.1f} секунды".format(int(first_degree), result_time))
 
