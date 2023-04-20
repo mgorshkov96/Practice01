@@ -44,3 +44,5 @@ matrix_c = [[14, 54, 8], [46, 41, 7], [5, 37, 12]]
 matrix_c = add_matrices(multiply_matrix_by_matrix(multiply_scalar_by_matrix(alpha, matrix_a), matrix_b),
                         multiply_scalar_by_matrix(beta, matrix_c))
 print(matrix_c)
+
+
