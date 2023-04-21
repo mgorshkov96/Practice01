@@ -1,8 +1,0 @@
-C:\Users\mgors\Desktop\Python\Practice01\Exercises\Exercise04\Csharp.Dgemm\Csharp.Dgemm.Int\bin\Debug\Csharp.Dgemm.Int.exe.config
-C:\Users\mgors\Desktop\Python\Practice01\Exercises\Exercise04\Csharp.Dgemm\Csharp.Dgemm.Int\bin\Debug\Csharp.Dgemm.Int.exe
-C:\Users\mgors\Desktop\Python\Practice01\Exercises\Exercise04\Csharp.Dgemm\Csharp.Dgemm.Int\bin\Debug\Csharp.Dgemm.Int.pdb
-C:\Users\mgors\Desktop\Python\Practice01\Exercises\Exercise04\Csharp.Dgemm\Csharp.Dgemm.Int\obj\Debug\Csharp.Dgemm.Int.csproj.AssemblyReference.cache
-C:\Users\mgors\Desktop\Python\Practice01\Exercises\Exercise04\Csharp.Dgemm\Csharp.Dgemm.Int\obj\Debug\Csharp.Dgemm.Int.csproj.SuggestedBindingRedirects.cache
-C:\Users\mgors\Desktop\Python\Practice01\Exercises\Exercise04\Csharp.Dgemm\Csharp.Dgemm.Int\obj\Debug\Csharp.Dgemm.Int.csproj.CoreCompileInputs.cache
-C:\Users\mgors\Desktop\Python\Practice01\Exercises\Exercise04\Csharp.Dgemm\Csharp.Dgemm.Int\obj\Debug\Csharp.Dgemm.Int.exe
-C:\Users\mgors\Desktop\Python\Practice01\Exercises\Exercise04\Csharp.Dgemm\Csharp.Dgemm.Int\obj\Debug\Csharp.Dgemm.Int.pdb
