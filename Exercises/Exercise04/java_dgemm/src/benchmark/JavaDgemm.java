@@ -7,7 +7,7 @@ public class JavaDgemm {
         Factory factory = new Factory();
         IDgemm dgemm = factory.create(reader);
         dgemm.calculateDgemm();
-        Writer writer = new Writer();
-        writer.write(reader.getMatrixCFile(), dgemm.getAnswer());
+//        Writer writer = new Writer();
+//        writer.write(reader.getMatrixCFile(), dgemm.getAnswer());
     }
 }

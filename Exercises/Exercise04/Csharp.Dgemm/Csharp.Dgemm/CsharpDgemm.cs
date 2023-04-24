@@ -11,16 +11,16 @@ namespace Csharp.Dgemm
             Factory factory= new Factory();
             IDgemm dgemm = factory.Create(reader);
 
-            if (dgemm != null)
-            {
-                dgemm.CalculateDgemm();
-                Writer writer = new Writer();
-                writer.Write(reader.MatrixCPath, dgemm.GetAnswer());
-            }
-            else
-            {
-                Console.WriteLine("Тип данных не распознан, попробуйте еще раз.");
-            }                
+            //if (dgemm != null)
+            //{
+            //    dgemm.CalculateDgemm();
+            //    Writer writer = new Writer();
+            //    writer.Write(reader.MatrixCPath, dgemm.GetAnswer());
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Тип данных не распознан, попробуйте еще раз.");
+            //}                
         }
     }
 }

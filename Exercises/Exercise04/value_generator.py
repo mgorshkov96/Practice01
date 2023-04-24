@@ -23,7 +23,14 @@ def generate_scalar(min_v, max_v, type_v):
 
 def enter_values():
     mat_size = int(input("Введите размер матриц (a * a), a: "))
-    val_type_number = int(input("Введите номер типа данных (Int - 1/Double - 2/BigInt - 3): "))
+    check = True
+    while check:
+        val_type_number = int(input("Введите номер типа данных (1 - Int/ 2 - Double/ 3 - BigInt): "))
+        if val_type_number == 1 or val_type_number == 2 or val_type_number == 3:
+            check = False
+        else:
+            print("Недопустимое значение, попробуйте еще раз")
+
     val_type = ""
 
     if val_type_number == 1:
