@@ -15,7 +15,7 @@ public class Writer {
             result.append(",");
             result.append(matrix_size);
             result.append(",");
-            result.append(String.valueOf(time));
+            result.append(time);
 
             writer.write(result.toString() + "\n");
         } catch (IOException e){

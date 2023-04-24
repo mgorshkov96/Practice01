@@ -123,7 +123,7 @@ alpha, beta, value_type, matrix_size, matrix_a, matrix_b, matrix_c = \
 
 start_time = time.time()
 
-for idx in range(1000):
+for idx in range(100):
     result = add_matrices(multiply_matrix_by_matrix(multiply_scalar_by_matrix(alpha, matrix_a), matrix_b),
                           multiply_scalar_by_matrix(beta, matrix_c))
 

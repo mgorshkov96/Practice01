@@ -10,7 +10,7 @@ public class JavaDgemm {
         IDgemm dgemm = factory.create(reader);
 
         long startTime = System.currentTimeMillis();
-        for(int i = 0; i < 1000; i++){
+        for(int i = 0; i < 100; i++){
             dgemm.calculateDgemm();
         }
         long endTime = System.currentTimeMillis();
