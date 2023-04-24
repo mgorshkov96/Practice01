@@ -16,7 +16,7 @@ public class BigIntDgemm implements IDgemm{
     }
     @Override
     public void calculateDgemm(){
-        matrixC = addMatrices(multiplyMatrixByMatrix(multiplyScalarByMatrix(alpha, matrixA), matrixB),
+        BigInteger[][] result = addMatrices(multiplyMatrixByMatrix(multiplyScalarByMatrix(alpha, matrixA), matrixB),
                 multiplyScalarByMatrix(beta, matrixC));
     }
     @Override

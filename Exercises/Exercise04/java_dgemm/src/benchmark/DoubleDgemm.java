@@ -14,7 +14,7 @@ public class DoubleDgemm implements IDgemm{
     }
     @Override
     public void calculateDgemm(){
-        matrixC = addMatrices(multiplyMatrixByMatrix(multiplyScalarByMatrix(alpha, matrixA), matrixB),
+        double[][] result = addMatrices(multiplyMatrixByMatrix(multiplyScalarByMatrix(alpha, matrixA), matrixB),
                 multiplyScalarByMatrix(beta, matrixC));
     }
     @Override

@@ -1,13 +1,25 @@
 package benchmark;
 
+import java.util.Date;
+
 public class JavaDgemm {
     public static void main(String[] args) {
         Reader reader = new Reader();
         reader.read();
         Factory factory = new Factory();
         IDgemm dgemm = factory.create(reader);
-        dgemm.calculateDgemm();
-//        Writer writer = new Writer();
-//        writer.write(reader.getMatrixCFile(), dgemm.getAnswer());
+
+        long startTime = System.currentTimeMillis();
+        for(int i = 0; i < 1000; i++){
+            dgemm.calculateDgemm();
+        }
+        long endTime = System.currentTimeMillis();
+
+        long result = endTime - startTime;
+        System.out.println(startTime);
+        System.out.println(endTime);
+        System.out.println(result);
+        Writer writer = new Writer();
+        writer.write(result, reader.getMatrixSize(), reader.getValueType());
     }
 }
