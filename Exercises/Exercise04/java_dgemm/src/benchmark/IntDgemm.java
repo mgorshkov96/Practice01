@@ -12,10 +12,11 @@ public class IntDgemm implements IDgemm{
         this.reader = reader;
         convertValues();
     }
+
     @Override
     public void calculateDgemm(){
         int[][] result = addMatrices(multiplyMatrixByMatrix(multiplyScalarByMatrix(alpha, matrixA), matrixB),
-               multiplyScalarByMatrix(beta, matrixC));
+                multiplyScalarByMatrix(beta, matrixC));
     }
     @Override
     public String[] getAnswer(){
@@ -23,11 +24,11 @@ public class IntDgemm implements IDgemm{
     }
 
     public int[][] multiplyMatrixByMatrix(int[][] firstMat, int[][] secondMat){
-        int[][] resultMatrix = new int[firstMat.length][secondMat[0].length];
+        int[][] resultMatrix = new int[reader.getMatrixSize()][reader.getMatrixSize()];
 
-        for (int m = 0; m < firstMat.length; m++){
-            for (int n = 0; n < secondMat[0].length; n++){
-                for (int k = 0; k < secondMat.length; k++){
+        for (int m = 0; m < reader.getMatrixSize(); m++){
+            for (int n = 0; n < reader.getMatrixSize(); n++){
+                for (int k = 0; k < reader.getMatrixSize(); k++){
                     resultMatrix[m][n] += firstMat[m][k] * secondMat[k][n];
                 }
             }
@@ -36,8 +37,8 @@ public class IntDgemm implements IDgemm{
     }
 
     public int[][] multiplyScalarByMatrix(int scal, int[][] mat){
-        for (int m = 0; m < mat.length; m++){
-            for (int n = 0; n < mat[0].length; n++){
+        for (int m = 0; m < reader.getMatrixSize(); m++){
+            for (int n = 0; n < reader.getMatrixSize(); n++){
                 mat[m][n] = mat[m][n] * scal;
             }
         }
@@ -45,8 +46,8 @@ public class IntDgemm implements IDgemm{
     }
 
     public int[][] addMatrices(int[][] firstMat, int[][] secondMat){
-        for (int m = 0; m < firstMat.length; m++){
-            for (int n = 0; n < secondMat[0].length; n++){
+        for (int m = 0; m < reader.getMatrixSize(); m++){
+            for (int n = 0; n < reader.getMatrixSize(); n++){
                 firstMat[m][n] += secondMat[m][n];
             }
         }
@@ -68,7 +69,6 @@ public class IntDgemm implements IDgemm{
         } catch (NumberFormatException e) {
             System.err.println("Error: " + e.getMessage());
         }
-
     }
 
     public int[][] convertMatrixToInt(String[][] strMatrix){

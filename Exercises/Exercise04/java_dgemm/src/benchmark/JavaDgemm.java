@@ -1,7 +1,5 @@
 package benchmark;
 
-import java.util.Date;
-
 public class JavaDgemm {
     public static void main(String[] args) {
         Reader reader = new Reader();
@@ -16,9 +14,7 @@ public class JavaDgemm {
         long endTime = System.currentTimeMillis();
 
         long result = endTime - startTime;
-        System.out.println(startTime);
-        System.out.println(endTime);
-        System.out.println(result);
+
         Writer writer = new Writer();
         writer.write(result, reader.getMatrixSize(), reader.getValueType());
     }

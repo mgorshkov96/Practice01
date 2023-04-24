@@ -128,7 +128,7 @@ for idx in range(100):
                           multiply_scalar_by_matrix(beta, matrix_c))
 
 end_time = time.time()
-result_time = (end_time - start_time) * 1000
+result_time = int((end_time - start_time) * 1000)
 
 data = [{
     "language": "python",

@@ -80,14 +80,7 @@ namespace Csharp.Dgemm
 
         public void CalculateDgemm()
         {
-            try
-            {
-                matrixC = AddMatrices(MultiplyMatrixByMatrix(MultiplyScalarByMatrix(alpha, matrixA), matrixB), MultiplyScalarByMatrix(beta, matrixC));
-            }
-            catch (OverflowException e)
-            {
-                Console.WriteLine(e.Message);
-            }            
+            matrixC = AddMatrices(MultiplyMatrixByMatrix(MultiplyScalarByMatrix(alpha, matrixA), matrixB), MultiplyScalarByMatrix(beta, matrixC));                
         }
         
 

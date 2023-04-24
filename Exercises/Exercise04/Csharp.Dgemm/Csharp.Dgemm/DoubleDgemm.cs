@@ -18,11 +18,12 @@ namespace Csharp.Dgemm
         public DoubleDgemm(Reader reader)
         {
             this.reader = reader;
-            ConvertValues();
+            ConvertValues();          
         }
 
         public void ConvertValues()
         {
+            System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en-US");
             try
             {
                 matrixA = new double[reader.MatrixSize, reader.MatrixSize];
@@ -83,14 +84,7 @@ namespace Csharp.Dgemm
 
         public void CalculateDgemm()
         {
-            try
-            {
-                matrixC = AddMatrices(MultiplyMatrixByMatrix(MultiplyScalarByMatrix(alpha, matrixA), matrixB), MultiplyScalarByMatrix(beta, matrixC));
-            }
-            catch (OverflowException e)
-            {
-                Console.WriteLine(e.Message);
-            }
+            matrixC = AddMatrices(MultiplyMatrixByMatrix(MultiplyScalarByMatrix(alpha, matrixA), matrixB), MultiplyScalarByMatrix(beta, matrixC));           
         }
 
 
